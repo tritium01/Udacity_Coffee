@@ -31,7 +31,7 @@ CORS(app)
 def get_drinks():
     drinks = Drink.query.all()
     formated_drinks = [drink.short() for drink in drinks]
-    print(formated_drinks)
+
     return jsonify({
         'success': True,
         'drinks': formated_drinks
